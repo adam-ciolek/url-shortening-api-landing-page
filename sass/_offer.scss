@@ -1,0 +1,56 @@
+.offer {
+	&__description {
+		width: min(100%, 500px);
+		display: inline-table;
+	}
+}
+
+.offer-cards {
+	@include mq(xxl) {
+		margin: 50px 0 80px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(6, min-content);
+		gap: 2.7rem;
+	}
+	&__top,
+	&__center,
+	&__end {
+		@include mq(xxl) {
+			margin: 0;
+			text-align: left;
+			padding: 0 20px 20px;
+		}
+	}
+	&__top {
+		@include mq(xxl) {
+			grid-column: 1/2;
+			grid-row: 1/5;
+		}
+	}
+	&__center {
+		@include mq(xxl) {
+			grid-column: 2/3;
+			grid-row: 2/6;
+		}
+	}
+	&__end {
+		@include mq(xxl) {
+			grid-column: 3/-1;
+			grid-row: 3/-1;
+		}
+	}
+}
+
+.position {
+	position: relative;
+	top: -70px;
+	@include mq(xxl) {
+		top: -55px;
+	}
+}
+.generate {
+	@include mq(xxl) {
+		flex-direction: row;
+	}
+}

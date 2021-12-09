@@ -1,0 +1,5 @@
+@mixin input($color) {
+	outline: none;
+	border: none;
+	color: $color;
+}

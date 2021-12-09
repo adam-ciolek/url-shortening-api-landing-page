@@ -1,0 +1,6 @@
+@mixin btn($color, $bg-color, $b-radius) {
+	color: $color;
+	background-color: $bg-color;
+	border-radius: $b-radius;
+	outline: none;
+}

@@ -1,0 +1,87 @@
+.footer {
+	&__logo {
+		@include mq(xxl) {
+			margin: 0;
+		}
+	}
+	&__nav {
+		@include mq(xxl) {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			text-align: left;
+		}
+		&__title {
+			@include mq(xxl) {
+				margin: 0 0 1.5rem;
+			}
+		}
+		& > div {
+			@include mq(xxl) {
+				margin-right: 4.5rem;
+			}
+		}
+		& > div:nth-child(3) {
+			@include mq(xxl) {
+				margin: 0;
+			}
+		}
+		& > div > a:hover {
+			color: $base-primary;
+		}
+	}
+	&__icon {
+		@include mq(xxl) {
+			margin: 0;
+		}
+		span {
+			cursor: pointer;
+		}
+		span svg path {
+			transition: all 0.2s ease;
+		}
+		span svg:hover path {
+			fill: $base-primary;
+		}
+	}
+	@include mq(xxl) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 6rem;
+		align-items: baseline;
+	}
+}
+
+.bg-footer {
+	background-color: hsl(260, 8%, 14%);
+}
+
+.icon {
+	margin: 0 auto;
+	position: relative;
+	top: -40px;
+	background-color: $base-secondary;
+	padding: 1.5rem;
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+	@include mq(xxl) {
+		margin-left: 0;
+		top: -30px;
+		height: 70px;
+		width: 70px;
+		line-height: 80px;
+	}
+	img {
+		@include mq(xxl) {
+			margin: 0 auto;
+		}
+	}
+}
+
+.fas {
+	@include mq(large) {
+		display: none;
+	}
+}

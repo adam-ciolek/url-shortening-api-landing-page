@@ -1,0 +1,27 @@
+.main {
+	&__img {
+		@include mq(xxl) {
+			order: 2;
+		}
+	}
+	&__description {
+		@include mq(xxl) {
+			text-align: left;
+		}
+		h1 {
+			@include mq(xxl) {
+				font-size: $base-font-size * 6;
+				font-weight: 900;
+			}
+		}
+		p {
+			@include mq(xxl) {
+				max-width: 500px;
+			}
+		}
+	}
+	@include mq(xxl) {
+		flex-direction: row;
+		margin-top: 10rem;
+	}
+}
