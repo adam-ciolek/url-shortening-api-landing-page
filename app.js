@@ -1,6 +1,8 @@
 
 const btn = document.querySelector('.btn-submit');
 const linkShorten = document.querySelector('.shorten-link');
+const error = document.querySelector('.error');
+const inputShortLink = document.querySelector('.input') 
 
 btn.addEventListener('click', () => {
     const input = document.querySelector('.input').value;
@@ -15,8 +17,14 @@ btn.addEventListener('click', () => {
     
 const show = (data , input) => {
 
-    if(input === '') return;
-    console.log(data)
+    if(input === '') {
+        error.innerHTML = 'Please add the link'
+        error.style.color= 'red'
+        inputShortLink.style.border = '3px solid red'
+        inputShortLink.classList.add('is')
+        return
+    }
+
     const div = document.createElement('div');
     
     div.innerHTML = 
@@ -33,22 +41,22 @@ const show = (data , input) => {
     `
     linkShorten.appendChild(div)  
 
+    error.innerHTML = ''
+    inputShortLink.style.border = ''
+    inputShortLink.classList.remove('is')
 }
 
 // Copy link
 
 const copyLink = target => {
-    console.log(target)
 
    var copy = document.getElementById(target);
 
     const btn = document.querySelector('.b')
 
    navigator.clipboard.writeText(copy.innerHTML);
-
     
-    if(target === btn['dataset'].target) {
-        console.log('true')
+    if(target === copy.id) {
         btn.innerHTML = 'Copied';
         btn.style.backgroundColor = 'hsl(255, 11%, 22%)';
     }

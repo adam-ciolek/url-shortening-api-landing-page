@@ -23,11 +23,7 @@
           <li class="mr-4"><a class="font-lg text-secondary nav-links o-60" href="#">Features</a></li>
           <li class="mr-4"><a class="font-lg text-secondary nav-links o-60" href="#">Pricing</a></li>
           <li class="mr-4"><a class="font-lg text-secondary nav-links o-60" href="#">Resources</a></li>
-        </ul>
-      </div>
-      <div class="col-4-lg menu">
-        <ul class="row justify-flex-end">
-          <li class="mr-2" ><a class="font-lg text-secondary nav-links o-60" href="#">Login</a></li>
+          <li class="mr-2 menu__push-right" ><a class="font-lg text-secondary nav-links o-60" href="#">Login</a></li>
           <li class="mr-2" ><a class="btn font-lg" href="#">Sign Up</a></li>
         </ul>
       </div>
@@ -51,11 +47,14 @@
     </div>
   </main>
 
-  <section class="bg-color pb-3"> 
+  <section class="bg-color pb-5"> 
     <div class="container ">
-      <div class="bg pt-3 pb-3 column br-xs pr-3 pl-3 position generate">
-          <input type="text" class=" br-xs col-12-xxl font-lg input" placeholder=" Shorten a link here...">
-          <button class="btn-submit mt-2 br-xs  font-lg font-700 col-2-xxl" >Shorten It!</button>
+      <div class="bg column br-xs pt-3 pb-3 pr-3 pl-3 position generate">
+        <div class="column generate__input">
+          <input type="text" class=" br-xs  font-lg input" placeholder=" Shorten a link here...">
+          <span class="error m-2 font-lg"></span>
+        </div>
+          <button class="btn-submit br-xs generate__btn font-lg font-700" >Shorten It!</button>
       </div>
       <div class="shorten-link"></div>
       <div class="text-align-center">
@@ -105,22 +104,28 @@
       <div class="footer__nav col-7-xxl">
         <div  class="column">
           <h4 class="font-xl font-700 mb-2 mt-2 footer__nav__title">Features</h4>
-          <a class="text-white font-lg o-70 font-500" href="#">Link Shortening</a>
-          <a class="text-white font-lg o-70 font-500 mt-1 mb-1" href="#">Branded Links</a>
-          <a class="text-white font-lg o-70 font-500" href="#">Analytics</a>
+          <div class="column">
+            <a class="text-white font-lg o-70 font-500" href="#">Link Shortening</a>
+            <a class="text-white font-lg o-70 font-500 mt-1 mb-1" href="#">Branded Links</a>
+            <a class="text-white font-lg o-70 font-500" href="#">Analytics</a>
+          </div>
         </div>
         <div class="column">
           <h4 class="font-xl font-700 mb-2 mt-2 footer__nav__title">Resources</h4>
-          <a class="text-white font-lg o-70 font-500" href="#">Blog</a>
-          <a class="text-white font-lg o-70 font-500 mt-1 mb-1" href="#">Developers</a>
-          <a class="text-white font-lg o-70 font-500" href="#">Support</a>
+          <div class="column">
+            <a class="text-white font-lg o-70 font-500" href="#">Blog</a>
+            <a class="text-white font-lg o-70 font-500 mt-1 mb-1" href="#">Developers</a>
+            <a class="text-white font-lg o-70 font-500" href="#">Support</a>
+          </div>
         </div>
         <div class="column">
           <h4 class="font-xl font-700 mb-2 mt-2 footer__nav__title">Company</h4>
-          <a class="text-white font-lg o-70 font-500" href="#">About</a>
-          <a class="text-white font-lg o-70 font-500 mt-1 mb-1" href="#">Our Team</a>
-          <a class="text-white font-lg o-70 font-500 mb-1" href="#">Careers</a>
-          <a class="text-white font-lg o-70 font-500" href="#">Contact</a>
+          <div class="column">
+            <a class="text-white font-lg o-70 font-500" href="#">About</a>
+            <a class="text-white font-lg o-70 font-500 mt-1 mb-1" href="#">Our Team</a>
+            <a class="text-white font-lg o-70 font-500 mb-1" href="#">Careers</a>
+            <a class="text-white font-lg o-70 font-500" href="#">Contact</a>
+          </div>
         </div>    
       </div>
       <div class="mt-4 col-3-xxl footer__icon">

@@ -44,13 +44,25 @@
 
 .position {
 	position: relative;
-	top: -70px;
+	top: -85px;
 	@include mq(xxl) {
-		top: -55px;
+		top: -80px;
 	}
 }
 .generate {
+	&__input {
+		@include mq(xxl) {
+			flex-basis: 80%;
+		}
+	}
+	&__btn {
+		@include mq(xxl) {
+			flex-grow: 1;
+			height: 49px;
+		}
+	}
 	@include mq(xxl) {
 		flex-direction: row;
+		padding-top: 5rem;
 	}
 }

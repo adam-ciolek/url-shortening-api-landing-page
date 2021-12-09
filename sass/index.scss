@@ -10,6 +10,7 @@ html {
 }
 
 @import "../style.scss/main.scss";
+@import "./nav";
 @import "./main";
 @import "./offer";
 @import "./footer";
@@ -49,13 +50,6 @@ body {
 	padding: 1.4rem 2rem;
 }
 
-.menu {
-	display: none;
-	@include mq(large) {
-		display: block;
-	}
-}
-
 .boost-link {
 	@include mq(xxl) {
 		font-size: 4rem;
@@ -63,7 +57,8 @@ body {
 }
 
 // js variables
-.in-correct {
+
+.is::placeholder {
 	color: red;
 }
 
